@@ -1,6 +1,8 @@
 const isPages = process.env.GITHUB_PAGES === 'true';
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
-const basePath = isPages && repoName ? `/${repoName}` : '';
+const repository = process.env.GITHUB_REPOSITORY ?? '';
+const repoName = repository.split('/')[1] ?? '';
+const isUserOrOrgSite = repoName.endsWith('.github.io');
+const basePath = isPages && repoName && !isUserOrOrgSite ? `/${repoName}` : '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
