@@ -47,5 +47,7 @@ GITHUB_PAGES=true GITHUB_REPOSITORY=tlpt-telepath/9-animes npm run build
 
 `out/` を Pages にデプロイしてください。
 
+このリポジトリには `main` ブランチへの push で自動デプロイする GitHub Actions ワークフロー（`.github/workflows/deploy-pages.yml`）を追加済みです。リポジトリ設定の **Settings > Pages > Build and deployment** では **Source: GitHub Actions** を選択してください。
+
 ## TMDB attribution
 This product uses the TMDB API but is not endorsed or certified by TMDB.
